@@ -64,7 +64,7 @@ def search_for_playlist(token, playlist_name):
         return pid
     
 def get_songs_of_playlist(token, playlist_id):
-    url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=2"
+    url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks"
     headers = get_auth_header(token)
     result = get(url, headers = headers)
     json_result = json.loads(result.content) #json.loads() kreiert ein Python dictonary - Kein Json
