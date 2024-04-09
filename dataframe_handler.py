@@ -7,19 +7,22 @@ def create_dataframe_from_playlist(spotify_playlist_songs):
     artist_names = []
     track_names = []
     popularity = []
+    explicit = []
 
     for item in spotify_playlist_songs['items']:
         track_ids.append(item['track']['id'])
         artist_names.append(item['track']['artists'][0]['name'])
         track_names.append(item['track']['name'])
         popularity.append(item['track']['popularity'])
+        explicit.append(item['track']['explicit'])
 
     # Erstelle ein Pandas DataFrame
     df = pd.DataFrame({
         'Track_ID': track_ids,
         'Artist_Name': artist_names,
         'Track_Name': track_names,
-        'Popularity': popularity
+        'Popularity': popularity,
+        'Explicit': explicit
     })
 
     return df

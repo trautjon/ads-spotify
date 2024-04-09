@@ -20,4 +20,5 @@ charts_df = dataframe.merge_basic_song_table_with_song_feautures(basic_song_tabl
 
 #Zum Debuggen
 
-print(charts_df)
+#print(charts_df)
+charts_df.to_excel(playlist_user_input + ".xlsx")
