@@ -162,3 +162,5 @@ cython_debug/
 
 # Eigene Dateien
 api-keys.json
+Playlistnames.txt
+*.xlsx
