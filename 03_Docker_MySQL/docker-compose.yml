@@ -8,6 +8,8 @@ services:
       MYSQL_ROOT_PASSWORD: example
     volumes:
       - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"  # Hier wird der Port 3306 des Containers auf den Port 3306 des Hosts weitergeleitet
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
